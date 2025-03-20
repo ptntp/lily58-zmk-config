@@ -26,7 +26,7 @@
             flavor = "balanced";
             tapping-term = <200>;
             quick-tap = <200>;
-            bindings = <&screen_sel_mac>, <&spotlight_mac>;
+            bindings = <&screen_sel_mac>, <&spot_mac>;
 
             label = "SHOT_SPOT";
             tapping-term-ms = <200>;
@@ -109,7 +109,7 @@
             label = "SCREEN_SEL_MAC";
         };
 
-        spotlight_mac: spotlight_mac {
+        spot_mac: spot_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
