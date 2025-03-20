@@ -103,11 +103,11 @@
             display-name = "Windows";
             label = "Win";
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                           &kp N6    &kp N7    &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                            &kp Y     &kp U     &kp I      &kp O    &kp P     &kp BSLH
-&kp LSHFT  &kp A   &kp S   &kp D   &kp F     &kp G                            &kp H     &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z   &kp X   &kp C   &kp V     &kp B     &to WinFN    &kp RBKT  &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
-                           &to FN  &kp LGUI  &kp LALT  &kp SPACE    &kp RET   &mo Main  &kp BSPC  &kp DEL
+&kp GRAVE  &kp N1  &kp N2  &kp N3           &kp N4    &kp N5                           &kp N6    &kp N7    &kp N8     &kp N9   &kp N0    &kp MINUS
+&kp TAB    &kp Q   &kp W   &kp E            &kp R     &kp T                            &kp Y     &kp U     &kp I      &kp O    &kp P     &kp BSLH
+&kp LSHFT  &kp A   &kp S   &kp D            &kp F     &kp G                            &kp H     &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z   &kp X   &kp C            &kp V     &kp B     &to WinFN    &kp RBKT  &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
+                           &screenshot_win  &kp LGUI  &kp LALT  &kp SPACE    &kp RET   &mo Main  &kp BSPC  &kp DEL
             >;
         };
 
@@ -115,11 +115,11 @@
             display-name = "WinFN";
             label = "WinFN";
             bindings = <
-&kp ESC    &kp F1           &kp F2         &kp LA(F4)    &kp F5                &kp F9                                           &screenshot_win  &kp SLASH  &kp KP_MULTIPLY  &kp MINUS  &kp HOME   &kp END
-&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN    &kp POUND     &kp DOLLAR            &kp PERCENT                                      &kp N7           &kp N8     &kp N9           &kp EQUAL  &kp PG_UP  &kp PG_DN
-&kp TILDE  &kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                            &kp N4           &kp N5     &kp N6           &kp RET    &kp UP     &kp BACKSPACE
-&kp LSHFT  &kp Z            &kp X          &kp C         &kp LBKT              &kp RBKT               &to WinMedia    &kp SEMI  &kp N1           &kp N2     &kp N3           &kp LEFT   &kp DOWN   &kp RIGHT
-                                           &kp LCTRL     &none                 &kp SQT                &kp COMMA       &kp DOT   &to Main         &kp N0     &kp FSLH
+&kp ESC    &kp F1           &kp F2         &kp LA(F4)    &kp F5                &kp F9                                           &kp BLSH  &kp SLASH  &kp KP_MULTIPLY  &kp MINUS  &kp HOME   &kp END
+&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN    &kp POUND     &kp DOLLAR            &kp PERCENT                                      &kp N7    &kp N8     &kp N9           &kp EQUAL  &kp PG_UP  &kp PG_DN
+&kp TILDE  &kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                            &kp N4    &kp N5     &kp N6           &kp RET    &kp UP     &kp BACKSPACE
+&kp LSHFT  &kp Z            &kp X          &kp C         &kp LBKT              &kp RBKT               &to WinMedia    &kp SEMI  &kp N1    &kp N2     &kp N3           &kp LEFT   &kp DOWN   &kp RIGHT
+                                           &kp LCTRL     &none                 &kp SQT                &kp COMMA       &kp DOT   &to Main  &kp N0     &kp FSLH
             >;
         };
 
@@ -151,11 +151,11 @@
             display-name = "MacFN";
             label = "MacFN";
             bindings = <
-&kp ESC    &kp F1           &kp F2         &kp LA(F4)    &kp F5                &kp F9                                           &screenshot_win  &kp SLASH  &kp KP_MULTIPLY  &kp MINUS  &kp HOME   &kp END
-&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN    &kp POUND     &kp DOLLAR            &kp PERCENT                                      &kp N7           &kp N8     &kp N9           &kp EQUAL  &kp PG_UP  &kp PG_DN
-&kp TILDE  &kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                            &kp N4           &kp N5     &kp N6           &kp RET    &kp UP     &kp BACKSPACE
-&kp LSHFT  &kp Z            &kp X          &kp C         &kp LBKT              &kp RBKT               &to MacMedia    &kp SEMI  &kp N1           &kp N2     &kp N3           &kp LEFT   &kp DOWN   &kp RIGHT
-                                           &kp LCTRL     &none                 &kp SQT                &kp COMMA       &kp DOT   &to Main         &kp N0     &kp FSLH
+&kp ESC    &kp F1           &kp F2         &kp LA(F4)    &kp F5                &kp F9                                           &kp BSLH  &kp SLASH  &kp KP_MULTIPLY  &kp MINUS  &kp HOME   &kp END
+&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN    &kp POUND     &kp DOLLAR            &kp PERCENT                                      &kp N7    &kp N8     &kp N9           &kp EQUAL  &kp PG_UP  &kp PG_DN
+&kp TILDE  &kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                            &kp N4    &kp N5     &kp N6           &kp RET    &kp UP     &kp BACKSPACE
+&kp LSHFT  &kp Z            &kp X          &kp C         &kp LBKT              &kp RBKT               &to MacMedia    &kp SEMI  &kp N1    &kp N2     &kp N3           &kp LEFT   &kp DOWN   &kp RIGHT
+                                           &kp LCTRL     &none                 &kp SQT                &kp COMMA       &kp DOT   &to Main  &kp N0     &kp FSLH
             >;
         };
 
