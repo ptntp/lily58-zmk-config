@@ -118,11 +118,11 @@
             tap-ms = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LA(LSHFT)>,
+                <&kp LALT>,
                 <&macro_tap>,
                 <&kp SPACE>,
                 <&macro_release>,
-                <&kp LA(LSHFT)>;
+                <&kp LALT>;
 
             label = "SPOTLIGHT_MAC";
         };
