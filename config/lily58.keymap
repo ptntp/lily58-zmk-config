@@ -94,6 +94,13 @@
 
             label = "SCREENSHOT_SEL_MAC";
         };
+
+        only_test: only_test {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp E &kp S &kp T>;
+            label = "ONLY_TEST";
+        };
     };
 
     keymap {
@@ -106,7 +113,7 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &fpc_id     &fpc_pw  &kp LG(L)  &excel_pw  &kp LC(LA(DELETE))  &kp BACKSPACE
 &none       &none         &none         &none         &none         &none                                     &none       &none    &none      &none      &none               &none
 &none       &none         &none         &none         &none         &none                                     &none       &none    &none      &none      &none               &none
-&none       &none         &none         &none         &none         &sys_reset    &to Win        &to Mac      &sys_reset  &none    &none      &none      &none               &none
+&only_test  &none         &none         &none         &none         &sys_reset    &to Win        &to Mac      &sys_reset  &none    &none      &none      &none               &none
                                         &none         &none         &none         &bootloader    &bootloader  &none       &none    &none
             >;
         };
