@@ -24,12 +24,11 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term = <200>;
+            tapping-term-ms = <200>;
             quick-tap = <200>;
             bindings = <&screen_sel_mac>, <&spotlight_mac>;
 
             label = "SHOT_SPOT";
-            tapping-term-ms = <200>;
         };
     };
 
