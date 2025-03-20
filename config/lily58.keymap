@@ -23,6 +23,8 @@
         fpc_id: fpc_id {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings = <&kp LS(N) &kp N0 &kp N0 &kp N0 &kp N1 &kp N1 &kp N7 &kp N0 &kp N5 &kp N4 &kp TAB>;
             label = "FPC_ID";
         };
@@ -30,6 +32,8 @@
         fpc_pw: fpc_pw {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings = <&kp N2 &kp N5 &kp N8 &kp N7 &kp N3 &kp N6 &kp N9 &kp N8 &kp LS(A) &kp A &kp ENTER>;
             label = "FPC_PW";
         };
@@ -37,6 +41,8 @@
         excel_pw: excel_pw {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings = <&kp N8 &kp N0 &kp N7 &kp N8 &kp N6 &kp N7 &kp ENTER>;
             label = "EXCEL_PW";
         };
@@ -44,6 +50,8 @@
         screenshot_win: screenshot_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LG(LSHFT)>,
@@ -58,6 +66,8 @@
         screenshot_full_mac: screenshot_full_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LG(LSHFT)>,
@@ -72,6 +82,8 @@
         screenshot_sel_mac: screenshot_sel_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LG(LSHFT)>,
