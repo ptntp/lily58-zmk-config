@@ -26,7 +26,7 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap = <200>;
-            bindings = <&screen_sel_mac>, <&spotlight_mac>;
+            bindings = <&spotlight_mac>, <&screen_sel_mac>;
 
             label = "SHOT_SPOT";
         };
@@ -38,7 +38,10 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&kp LS(N) &kp N0 &kp N0 &kp N0 &kp N1 &kp N1 &kp N7 &kp N0 &kp N5 &kp N4 &kp TAB>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(N) &kp N0 &kp N0 &kp N0 &kp N1 &kp N1 &kp N7 &kp N0 &kp N5 &kp N4 &kp TAB>;
+
             label = "FPC_ID";
         };
 
@@ -47,7 +50,10 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&kp N2 &kp N5 &kp N8 &kp N7 &kp N3 &kp N6 &kp N9 &kp N8 &kp LS(A) &kp A &kp ENTER>;
+            bindings =
+                <&macro_tap>,
+                <&kp N2 &kp N5 &kp N8 &kp N7 &kp N3 &kp N6 &kp N9 &kp N8 &kp LS(A) &kp A &kp ENTER>;
+
             label = "FPC_PW";
         };
 
@@ -56,7 +62,10 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&kp N8 &kp N0 &kp N7 &kp N8 &kp N6 &kp N7 &kp ENTER>;
+            bindings =
+                <&macro_tap>,
+                <&kp N8 &kp N0 &kp N7 &kp N8 &kp N6 &kp N7 &kp ENTER>;
+
             label = "EXCEL_PW";
         };
 
