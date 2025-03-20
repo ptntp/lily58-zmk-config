@@ -103,7 +103,7 @@
             display-name = "Main";
             label = "Main";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &fpc_id     &fpc_pw  &kp LG(L)  &excel_pw  &kp LC(LA(DELETE))  &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &fpc_id     &fpc_pw  &kp LG(L)  &excel_pw  &kp LC(LA(DELETE))  &kp BACKSPACE
 &none       &none         &none         &none         &none         &none                                     &none       &none    &none      &none      &none               &none
 &none       &none         &none         &none         &none         &none                                     &none       &none    &none      &none      &none               &none
 &none       &none         &none         &none         &none         &sys_reset    &to Win        &to Mac      &sys_reset  &none    &none      &none      &none               &none
