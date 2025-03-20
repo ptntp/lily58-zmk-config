@@ -29,6 +29,7 @@
             bindings = <&screen_sel_mac>, <&spotlight_mac>;
             
             label = "SHOT_SPOT";
+        };
     };
 
     macros {
