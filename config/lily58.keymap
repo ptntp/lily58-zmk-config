@@ -72,7 +72,7 @@
                 <&macro_press>,
                 <&kp LG(LSHFT)>,
                 <&macro_tap>,
-                <&kp KP_N3>,
+                <&kp N3>,
                 <&macro_release>,
                 <&kp LG(LSHFT)>;
 
@@ -88,7 +88,7 @@
                 <&macro_press>,
                 <&kp LG(LSHFT)>,
                 <&macro_tap>,
-                <&kp KP_N4>,
+                <&kp N4>,
                 <&macro_release>,
                 <&kp LG(LSHFT)>;
 
