@@ -29,7 +29,7 @@
             bindings = <&screenshot_sel_mac>, <&spotlight_mac>;
             
             label = "SHOT_SPOT";
-    }
+    };
 
     macros {
         fpc_id: fpc_id {
@@ -38,6 +38,7 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings = <&kp LS(N) &kp N0 &kp N0 &kp N0 &kp N1 &kp N1 &kp N7 &kp N0 &kp N5 &kp N4 &kp TAB>;
+            
             label = "FPC_ID";
         };
 
@@ -47,6 +48,7 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings = <&kp N2 &kp N5 &kp N8 &kp N7 &kp N3 &kp N6 &kp N9 &kp N8 &kp LS(A) &kp A &kp ENTER>;
+            
             label = "FPC_PW";
         };
 
@@ -56,6 +58,7 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings = <&kp N8 &kp N0 &kp N7 &kp N8 &kp N6 &kp N7 &kp ENTER>;
+            
             label = "EXCEL_PW";
         };
 
@@ -121,15 +124,6 @@
                 <&kp LG(LSHFT)>;
 
             label = "SPOTLIGHT_MAC";
-        };
-
-        only_test: only_test {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&kp T &kp E &kp S &kp T>;
-            label = "ONLY_TEST";
         };
     };
 
