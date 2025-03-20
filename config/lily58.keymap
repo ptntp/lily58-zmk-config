@@ -61,7 +61,7 @@
             label = "EXCEL_PW";
         };
 
-        screen_win: screenshot_win {
+        screen_win: screen_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -74,10 +74,10 @@
                 <&macro_release>,
                 <&kp LG(LSHFT)>;
 
-            label = "SCREENSHOT_WIN";
+            label = "SCREEN_WIN";
         };
 
-        screen_full_mac: screenshot_full_mac {
+        screen_full_mac: screen_full_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -90,10 +90,10 @@
                 <&macro_release>,
                 <&kp LG(LSHFT)>;
 
-            label = "SCREENSHOT_FULL_MAC";
+            label = "SCREEN_FULL_MAC";
         };
 
-        screen_sel_mac: screenshot_sel_mac {
+        screen_sel_mac: screen_sel_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
@@ -106,7 +106,7 @@
                 <&macro_release>,
                 <&kp LG(LSHFT)>;
 
-            label = "SCREENSHOT_SEL_MAC";
+            label = "SCREEN_SEL_MAC";
         };
 
         spotlight_mac: spotlight_mac {
@@ -122,7 +122,7 @@
                 <&macro_release>,
                 <&kp LALT>;
 
-            label = "SPOTLIGHT_MAC";
+            label = "SPOT_MAC";
         };
     };
 
