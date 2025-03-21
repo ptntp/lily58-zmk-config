@@ -20,15 +20,10 @@
 
 / {
     behaviors {
-        shot_spot: shot_spot {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap = <200>;
-            bindings = <&spotlight_mac>, <&screen_sel_mac>;
-
-            label = "SHOT_SPOT";
+        spot_shot: spot_shot {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&spot_mac>, <&screen_sel_mac>;
         };
     };
 
@@ -192,7 +187,7 @@
 &kp ESC         &kp N1  &kp N2  &kp N3     &kp N4    &kp N5                             &kp N6         &kp N7         &kp N8      &kp N9   &kp N0    &kp UP
 &kp TAB         &kp Q   &kp W   &kp E      &kp R     &kp T                              &kp Y          &kp U          &kp I       &kp O    &kp P     &kp LEFT
 &kp LEFT_SHIFT  &kp A   &kp S   &kp D      &kp F     &kp G                              &kp H          &kp J          &kp K       &kp L    &kp SEMI  &kp RIGHT
-&kp LCTRL       &kp Z   &kp X   &kp C      &kp V     &kp B     &to MacFN    &shot_spot  &kp N          &kp M          &kp COMMA   &kp DOT  &kp FSLH  &kp DOWN
+&kp LCTRL       &kp Z   &kp X   &kp C      &kp V     &kp B     &to MacFN    &spot_shot  &kp N          &kp M          &kp COMMA   &kp DOT  &kp FSLH  &kp DOWN
                                 &kp LCTRL  &kp LALT  &kp LGUI  &kp SPACE    &kp RET     &kp BACKSPACE  &kp BACKSLASH  &kp DELETE
             >;
         };
