@@ -158,11 +158,11 @@
             display-name = "Windows";
             label = "Win";
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3       &kp N4    &kp N5                           &kp N6         &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB    &kp Q   &kp W   &kp E        &kp R     &kp T                            &kp Y          &kp U   &kp I      &kp O    &kp P     &kp BSLH
-&kp LSHFT  &kp A   &kp S   &kp D        &kp F     &kp G                            &kp H          &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z   &kp X   &kp C        &kp V     &kp B     &to WinFN    &kp RBKT  &kp N          &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
-                           &screen_win  &kp LGUI  &kp LALT  &kp SPACE    &kp RET   &kp BACKSPACE  &mo 0   &kp DEL
+&kp GRAVE  &kp N1       &kp N2      &kp N3              &kp N4            &kp N5                           &kp N6         &kp N7       &kp N8           &kp N9           &kp N0                &kp MINUS
+&kp TAB    &kp Q        &kp W       &kp E               &kp R             &kp T                            &kp Y          &kp U        &kp I            &kp O            &kp P                 &kp BSLH
+&kp LSHFT  &mt LCTRL A  &mt LALT S  &mt LEFT_COMMAND D  &mt LEFT_SHIFT F  &kp G                            &kp H          &mt RCTRL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &mt RIGHT_SHIFT SEMI  &kp SQT
+&kp LCTRL  &kp Z        &kp X       &kp C               &kp V             &kp B     &to WinFN    &kp RBKT  &kp N          &kp M        &kp COMMA        &kp DOT          &kp FSLH              &kp LSHFT
+                                    &screen_win         &kp LGUI          &kp LALT  &kp SPACE    &kp RET   &kp BACKSPACE  &mo 0        &kp DEL
             >;
         };
 
