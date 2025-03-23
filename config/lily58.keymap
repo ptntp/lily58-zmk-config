@@ -26,12 +26,12 @@
             bindings = <&spot_mac>, <&screen_sel_mac>;
         };
 
-        LBKT_RBKT: LBKT_RBKT {
+        LR_BKT: LR_BKT {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&L_BKT>, <&R_BKT>;
+            bindings = <&kp LBKT>, <&kp RBKT>;
 
-            label = "LBKT_RBKT";
+            label = "LR_BKT";
         };
     };
 
@@ -145,22 +145,6 @@
 
             label = "CHK_L0";
         };
-
-        L_BKT: L_BKT {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LBKT>;
-
-            label = "L_BKT";
-        };
-
-        R_BKT: R_BKT {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp RBKT>;
-
-            label = "R_BKT";
-        };
     };
 
     keymap {
@@ -182,11 +166,11 @@
             display-name = "Windows";
             label = "Win";
             bindings = <
-&kp ESCAPE  &kp N1       &kp N2      &kp N3              &kp N4            &kp N5                             &kp N6         &kp N7       &kp N8           &kp N9           &kp N0                &kp MINUS
-&kp TAB     &kp Q        &kp W       &kp E               &kp R             &kp T                              &kp Y          &kp U        &kp I            &kp O            &kp P                 &kp BSLH
-&kp LSHFT   &mt LCTRL A  &mt LALT S  &mt LEFT_COMMAND D  &mt LEFT_SHIFT F  &kp G                              &kp H          &mt RCTRL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &mt RIGHT_SHIFT SEMI  &kp SQT
-&kp LCTRL   &kp Z        &kp X       &kp C               &kp V             &kp B     &to 2        &LBKT_RBKT  &kp N          &kp M        &kp COMMA        &kp DOT          &kp FSLH              &kp LSHFT
-                                     &screen_win         &kp LGUI          &kp LALT  &kp SPACE    &kp RET     &kp BACKSPACE  &mo 0        &kp DEL
+&kp ESCAPE  &kp N1       &kp N2      &kp N3              &kp N4            &kp N5                          &kp N6         &kp N7       &kp N8           &kp N9           &kp N0                &kp MINUS
+&kp TAB     &kp Q        &kp W       &kp E               &kp R             &kp T                           &kp Y          &kp U        &kp I            &kp O            &kp P                 &kp BSLH
+&kp LSHFT   &mt LCTRL A  &mt LALT S  &mt LEFT_COMMAND D  &mt LEFT_SHIFT F  &kp G                           &kp H          &mt RCTRL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &mt RIGHT_SHIFT SEMI  &kp SQT
+&kp LCTRL   &kp Z        &kp X       &kp C               &kp V             &kp B     &to 2        &LR_BKT  &kp N          &kp M        &kp COMMA        &kp DOT          &kp FSLH              &kp LSHFT
+                                     &screen_win         &kp LGUI          &kp LALT  &kp SPACE    &kp RET  &kp BACKSPACE  &mo 0        &kp DEL
             >;
         };
 
