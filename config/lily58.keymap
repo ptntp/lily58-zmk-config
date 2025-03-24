@@ -13,10 +13,9 @@
 #define Main        0
 #define Win         1
 #define WinFN       2
-#define WinMedia    3
-#define Mac         4
-#define MacFN       5
-#define MacMedia    6
+#define Mac         3
+#define MacFN       4
+#define MacMedia    5
 
 / {
     behaviors {
