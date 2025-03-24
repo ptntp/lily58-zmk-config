@@ -16,8 +16,6 @@
 #define Mac         3
 #define MacFN       4
 
-&mt { tapping-term-ms = <160>; };
-
 / {
     behaviors {
         spot_shot: spot_shot {
