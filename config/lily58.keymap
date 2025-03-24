@@ -155,7 +155,7 @@
             label = "Main";
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &fpc_id     &fpc_pw  &kp LG(L)  &excel_pw  &kp LC(LA(DELETE))  &kp BACKSPACE
-&none       &none         &none         &none         &none         &none                                     &none       &none    &none      &none      &none               &none
+&none       &none         &none         &none         &none         &none                                     &kp ENTER   &none    &none      &none      &none               &none
 &none       &none         &none         &none         &none         &none                                     &none       &none    &none      &none      &none               &none
 &chk_L0     &none         &none         &none         &none         &sys_reset    &to 1          &to 3        &sys_reset  &none    &none      &none      &none               &none
                                         &none         &none         &none         &bootloader    &bootloader  &none       &none    &none
@@ -166,11 +166,11 @@
             display-name = "Windows";
             label = "Win";
             bindings = <
-&kp ESCAPE  &kp N1       &kp N2      &kp N3              &kp N4            &kp N5                          &kp N6         &kp N7       &kp N8           &kp N9           &kp N0                &kp MINUS
-&kp TAB     &kp Q        &kp W       &kp E               &kp R             &kp T                           &kp Y          &kp U        &kp I            &kp O            &kp P                 &kp BSLH
-&kp LSHFT   &mt LCTRL A  &mt LALT S  &mt LEFT_COMMAND D  &mt LEFT_SHIFT F  &kp G                           &kp H          &mt RCTRL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &mt RIGHT_SHIFT SEMI  &kp SQT
-&kp LCTRL   &kp Z        &kp X       &kp C               &kp V             &kp B     &to 2        &LR_BKT  &kp N          &kp M        &kp COMMA        &kp DOT          &kp FSLH              &kp LSHFT
-                                     &screen_win         &kp LGUI          &kp LALT  &kp SPACE    &kp RET  &kp BACKSPACE  &mo 0        &kp DEL
+&kp ESC    &kp N1       &kp N2      &kp N3              &kp N4            &kp N5                          &kp N6         &kp N7       &kp N8           &kp N9           &kp N0                &kp MINUS
+&kp TAB    &kp Q        &kp W       &kp E               &kp R             &kp T                           &kp Y          &kp U        &kp I            &kp O            &kp P                 &kp BSLH
+&kp LSHFT  &mt LCTRL A  &mt LALT S  &mt LEFT_COMMAND D  &mt LEFT_SHIFT F  &kp G                           &kp H          &mt RCTRL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &mt RIGHT_SHIFT SEMI  &kp SQT
+&kp LCTRL  &kp Z        &kp X       &kp C               &kp V             &kp B     &to 2        &LR_BKT  &kp N          &kp M        &kp COMMA        &kp DOT          &kp FSLH              &kp LSHFT
+                                    &screen_win         &kp LGUI          &kp LALT  &kp SPACE    &kp RET  &kp BACKSPACE  &mo 0        &kp DEL
             >;
         };
 
