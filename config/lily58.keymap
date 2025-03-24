@@ -21,7 +21,9 @@
         spot_shot: spot_shot {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&spot_mac>, <&screen_sel_mac>;
+            bindings = <&kp LA(SPACE)>, <&kp LG(LS(NUMBER_4))>;
+
+            label = "SPOT_SHOT";
         };
 
         LR_BKT: LR_BKT {
@@ -200,11 +202,11 @@
             display-name = "Main";
             label = "Main";
             bindings = <
-&kp ESC  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3          &bt BT_SEL 4                              &fpc_id     &fpc_pw  &kp LG(L)  &excel_pw  &kp LC(LA(DELETE))  &kp BACKSPACE
-&kp TAB  &none         &none         &none         &kp LG(LS(NUMBER_4))  &bt BT_CLR                                &kp ENTER   &none    &none      &none      &none               &none
-&none    &none         &none         &none         &none                 &none                                     &none       &none    &none      &none      &none               &none
-&chk_L0  &none         &none         &none         &none                 &sys_reset    &to 1          &to 3        &sys_reset  &none    &none      &none      &none               &none
-                                     &none         &none                 &none         &bootloader    &bootloader  &none       &none    &none
+&kp ESC  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &fpc_id     &fpc_pw  &kp LG(L)  &excel_pw  &kp LC(LA(DELETE))  &kp BACKSPACE
+&kp TAB  &none         &none         &none         &none         &bt BT_CLR                                &kp ENTER   &none    &none      &none      &none               &none
+&none    &none         &none         &none         &none         &none                                     &none       &none    &none      &none      &none               &none
+&chk_L0  &none         &none         &none         &none         &sys_reset    &to 1          &to 3        &sys_reset  &none    &none      &none      &none               &none
+                                     &none         &none         &none         &bootloader    &bootloader  &none       &none    &none
             >;
         };
 
@@ -212,11 +214,11 @@
             display-name = "Windows";
             label = "Win";
             bindings = <
-&kp ESC      &kp N1       &kp N2      &kp N3              &kp N4            &kp N5                              &kp N6         &kp N7       &kp N8           &kp N9           &kp N0                &kp MINUS
-&tab_garve   &kp Q        &kp W       &kp E               &kp R             &kp T                               &kp Y          &kp U        &kp I            &kp O            &kp P                 &kp EQUAL
-&screen_win  &mt LCTRL A  &mt LALT S  &mt LEFT_COMMAND D  &mt LEFT_SHIFT F  &kp G                               &kp H          &mt RCTRL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &mt RIGHT_SHIFT SEMI  &kp SQT
-&none        &kp Z        &kp X       &kp C               &kp V             &kp B         &to 2        &LR_BKT  &kp N          &kp M        &kp COMMA        &kp DOT          &kp FSLH              &kp BACKSLASH
-                                      &kp LCTRL           &kp LGUI          &kp LEFT_ALT  &kp SPACE    &kp RET  &kp BACKSPACE  &none        &kp DEL
+&kp ESC        &kp N1       &kp N2      &kp N3              &kp N4            &kp N5                              &kp N6         &kp N7       &kp N8           &kp N9           &kp N0                &kp MINUS
+&tab_garve     &kp Q        &kp W       &kp E               &kp R             &kp T                               &kp Y          &kp U        &kp I            &kp O            &kp P                 &kp EQUAL
+&kp LG(LS(S))  &mt LCTRL A  &mt LALT S  &mt LEFT_COMMAND D  &mt LEFT_SHIFT F  &kp G                               &kp H          &mt RCTRL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &mt RIGHT_SHIFT SEMI  &kp SQT
+&none          &kp Z        &kp X       &kp C               &kp V             &kp B         &to 2        &LR_BKT  &kp N          &kp M        &kp COMMA        &kp DOT          &kp FSLH              &kp BACKSLASH
+                                        &kp LCTRL           &kp LGUI          &kp LEFT_ALT  &kp SPACE    &kp RET  &kp BACKSPACE  &none        &kp DEL
             >;
         };
 
@@ -248,11 +250,11 @@
             display-name = "MacFN";
             label = "MacFN";
             bindings = <
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &spot_mac     &rec_mac                             &kp BACKSPACE  &kp SLASH  &kp KP_MULTIPLY  &kp MINUS  &kp HOME   &kp END
-&kp C_MUTE            &kp C_VOL_DN          &kp C_VOL_UP                       &kp C_PREV                              &kp C_PP      &kp C_NEXT                           &kp N7         &kp N8     &kp N9           &kp EQUAL  &kp PG_UP  &kp PG_DN
-&none                 &none                 &none                              &none                                   &none         &none                                &kp N4         &kp N5     &kp N6           &kp RET    &kp UP     &none
-&none                 &none                 &none                              &none                                   &none         &none       &to 3        &to 0       &kp N1         &kp N2     &kp N3           &kp LEFT   &kp DOWN   &kp RIGHT
-                                                                               &kp LCTRL                               &kp LEFT_ALT  &kp LCMD    &kp SPACE    &kp RETURN  &none          &kp N0     &none
+&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &spot_mac     &kp LG(LS(N5))                           &kp BACKSPACE  &kp SLASH  &kp KP_MULTIPLY  &kp MINUS  &kp HOME   &kp END
+&kp C_MUTE            &kp C_VOL_DN          &kp C_VOL_UP                       &kp C_PREV                              &kp C_PP      &kp C_NEXT                               &kp N7         &kp N8     &kp N9           &kp EQUAL  &kp PG_UP  &kp PG_DN
+&none                 &none                 &none                              &none                                   &none         &none                                    &kp N4         &kp N5     &kp N6           &kp RET    &kp UP     &none
+&none                 &none                 &none                              &none                                   &none         &none           &to 3        &to 0       &kp N1         &kp N2     &kp N3           &kp LEFT   &kp DOWN   &kp RIGHT
+                                                                               &kp LCTRL                               &kp LEFT_ALT  &kp LCMD        &kp SPACE    &kp RETURN  &none          &kp N0     &none
             >;
         };
     };
