@@ -154,11 +154,11 @@
             display-name = "Main";
             label = "Main";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &fpc_id     &fpc_pw  &kp LG(L)  &excel_pw  &kp LC(LA(DELETE))  &kp BACKSPACE
-&kp TAB     &none         &none         &none         &none         &bt BT_CLR                                &kp ENTER   &none    &none      &none      &none               &none
-&none       &none         &none         &none         &none         &none                                     &none       &none    &none      &none      &none               &none
-&chk_L0     &none         &none         &none         &none         &sys_reset    &to 1          &to 3        &sys_reset  &none    &none      &none      &none               &none
-                                        &none         &none         &none         &bootloader    &bootloader  &none       &none    &none
+&kp ESC  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &fpc_id     &fpc_pw  &kp LG(L)  &excel_pw  &kp LC(LA(DELETE))  &kp BACKSPACE
+&kp TAB  &none         &none         &none         &none         &bt BT_CLR                                &kp ENTER   &none    &none      &none      &none               &none
+&none    &none         &none         &none         &none         &none                                     &none       &none    &none      &none      &none               &none
+&chk_L0  &none         &none         &none         &none         &sys_reset    &to 1          &to 3        &sys_reset  &none    &none      &none      &none               &none
+                                     &none         &none         &none         &bootloader    &bootloader  &none       &none    &none
             >;
         };
 
