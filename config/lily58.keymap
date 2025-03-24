@@ -106,70 +106,6 @@
             label = "EXCEL_PW";
         };
 
-        screen_win: screen_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LG(LSHFT)>,
-                <&macro_tap>,
-                <&kp S>,
-                <&macro_release>,
-                <&kp LG(LSHFT)>;
-
-            label = "SCREEN_WIN";
-        };
-
-        screen_full_mac: screen_full_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LG(LSHFT)>,
-                <&macro_tap>,
-                <&kp N3>,
-                <&macro_release>,
-                <&kp LG(LSHFT)>;
-
-            label = "SCREEN_FULL_MAC";
-        };
-
-        screen_sel_mac: screen_sel_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LG(LSHFT)>,
-                <&macro_tap>,
-                <&kp N4>,
-                <&macro_release>,
-                <&kp LG(LSHFT)>;
-
-            label = "SCREEN_SEL_MAC";
-        };
-
-        spot_mac: spot_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp SPACE>,
-                <&macro_release>,
-                <&kp LALT>;
-
-            label = "SPOT_MAC";
-        };
-
         chk_L0: chk_L0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -178,22 +114,6 @@
             bindings = <&macro_tap>, <&kp T &kp E &kp S &kp T>;
 
             label = "CHK_L0";
-        };
-
-        rec_mac: rec_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LG(LEFT_SHIFT)>,
-                <&macro_tap>,
-                <&kp N5>,
-                <&macro_release>,
-                <&kp LG(LEFT_SHIFT)>;
-
-            label = "REC_MAC";
         };
     };
 
@@ -252,11 +172,11 @@
             display-name = "MacFN";
             label = "MacFN";
             bindings = <
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &spot_mac     &kp LG(LS(N5))                           &none          &kp SLASH  &kp KP_MULTIPLY  &kp MINUS  &kp HOME   &kp END
-&kp C_MUTE            &kp C_VOL_DN          &kp C_VOL_UP                       &kp C_PREV                              &kp C_PP      &kp C_NEXT                               &kp N7         &kp N8     &kp N9           &kp EQUAL  &kp PG_UP  &kp PG_DN
-&none                 &none                 &none                              &none                                   &none         &none                                    &kp N4         &kp N5     &kp N6           &kp RET    &kp UP     &none
-&none                 &none                 &none                              &none                                   &none         &none           &to 3        &to 0       &kp N1         &kp N2     &kp N3           &kp LEFT   &kp DOWN   &kp RIGHT
-                                                                               &kp LCTRL                               &kp LEFT_ALT  &kp LCMD        &kp SPACE    &kp RETURN  &kp BACKSPACE  &kp N0     &none
+&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &kp LA(SPACE)  &kp LG(LS(N5))                           &none          &kp SLASH  &kp KP_MULTIPLY  &kp MINUS  &kp HOME   &kp END
+&kp C_MUTE            &kp C_VOL_DN          &kp C_VOL_UP                       &kp C_PREV                              &kp C_PP       &kp C_NEXT                               &kp N7         &kp N8     &kp N9           &kp EQUAL  &kp PG_UP  &kp PG_DN
+&none                 &none                 &none                              &none                                   &none          &none                                    &kp N4         &kp N5     &kp N6           &kp RET    &kp UP     &none
+&none                 &none                 &none                              &none                                   &none          &none           &to 3        &to 0       &kp N1         &kp N2     &kp N3           &kp LEFT   &kp DOWN   &kp RIGHT
+                                                                               &kp LCTRL                               &kp LEFT_ALT   &kp LCMD        &kp SPACE    &kp RETURN  &kp BACKSPACE  &kp N0     &none
             >;
         };
     };
