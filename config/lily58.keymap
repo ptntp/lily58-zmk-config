@@ -146,11 +146,11 @@
             display-name = "WinFN";
             label = "WinFN";
             bindings = <
-&tab_f1  &kp F2  &f4_altf4  &kp F5     &kp F6    &f7_f8                           &none          &kp SLASH  &kp KP_MULTIPLY  &kp MINUS  &kp HOME   &kp END
+&tab_f1  &kp F2  &f4_altf4  &kp F5     &kp F6    &f7_f8                           &kp BACKSPACE  &kp SLASH  &kp KP_MULTIPLY  &kp MINUS  &kp HOME   &kp END
 &none    &none   &none      &none      &kp F9    &kp F12                          &kp N7         &kp N8     &kp N9           &kp EQUAL  &kp PG_UP  &kp PG_DN
 &none    &none   &none      &none      &none     &none                            &kp N4         &kp N5     &kp N6           &kp RET    &kp UP     &none
 &none    &none   &none      &none      &none     &none    &to 1        &to 0      &kp N1         &kp N2     &kp N3           &kp LEFT   &kp DOWN   &kp RIGHT
-                            &kp LCTRL  &kp LWIN  &kp SQT  &kp SPACE    &kp ENTER  &kp BACKSPACE  &kp N0     &kp DELETE
+                            &kp LCTRL  &kp LWIN  &kp SQT  &kp SPACE    &kp ENTER  &kp DELETE     &kp N0     &kp DOT
             >;
         };
 
