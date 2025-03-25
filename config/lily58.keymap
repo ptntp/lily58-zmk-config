@@ -42,12 +42,12 @@
             label = "F4_ALTF4";
         };
 
-        tab_garve: tab_garve {
+        esc_garve: esc_garve {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp TAB>, <&kp GRAVE>;
+            bindings = <&kp ESC>, <&kp GRAVE>;
 
-            label = "TAB_GARVE";
+            label = "ESC_GARVE";
         };
 
         f7_f8: f7_f8 {
@@ -160,8 +160,8 @@
             display-name = "Windows";
             label = "Win";
             bindings = <
-&kp ESC         &kp N1       &kp N2      &kp N3              &kp N4            &kp N5                              &kp N6         &kp N7       &kp N8           &kp N9           &kp N0                &kp MINUS
-&tab_garve      &kp Q        &kp W       &kp E               &kp R             &kp T                               &kp Y          &kp U        &kp I            &kp O            &kp P                 &kp EQUAL
+&esc_garve      &kp N1       &kp N2      &kp N3              &kp N4            &kp N5                              &kp N6         &kp N7       &kp N8           &kp N9           &kp N0                &kp MINUS
+&kp TAB         &kp Q        &kp W       &kp E               &kp R             &kp T                               &kp Y          &kp U        &kp I            &kp O            &kp P                 &kp EQUAL
 &winshot_print  &mt LCTRL A  &mt LALT S  &mt LEFT_COMMAND D  &mt LEFT_SHIFT F  &kp G                               &kp H          &mt RCTRL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &mt RIGHT_SHIFT SEMI  &kp SQT
 &none           &kp Z        &kp X       &kp C               &kp V             &kp B         &to 2        &LR_BKT  &kp N          &kp M        &kp COMMA        &kp DOT          &kp FSLH              &kp BACKSLASH
                                          &kp LCTRL           &kp LGUI          &kp LEFT_ALT  &kp SPACE    &kp RET  &kp BACKSPACE  &none        &kp DEL
