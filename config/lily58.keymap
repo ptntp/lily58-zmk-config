@@ -50,28 +50,44 @@
             label = "ESC_GARVE";
         };
 
-        f7_f8: f7_f8 {
+        f7_f8_pf8: f7_f8_pf8 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp F7>, <&kp F8>;
+            bindings = <&kp F7>, <&kp F8>, <&kp LS(F8)>;
 
-            label = "F7_F8";
+            label = "F7_F8_PF8";
         };
 
-        winshot_print: winshot_print {
+        print_shot: print_shot {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp LG(LS(S))>, <&kp LC(P)>;
+            bindings = <&kp LG(P)>, <&kp LG(LS(S))>;
 
-            label = "WINSHOT_PRINT";
+            label = "PRINT_SHOT";
         };
 
-        esc_switch: esc_switch {
+        f5_f9: f5_f9 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp LA(TAB)>;
+            bindings = <&kp F5>, <&kp F9>;
 
-            label = "ESC_SWITCH";
+            label = "F5_F9";
+        };
+
+        fpcID_PW: fpcID_PW {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&fpc_id>, <&fpc_pw>;
+
+            label = "FPCID_PW";
+        };
+
+        winD_up: winD_up {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&kp LG(F5)>, <&kp LG(UP_ARROW)>;
+
+            label = "WIND_UP";
         };
     };
 
@@ -132,6 +148,7 @@
                 <&kp LG(D)>,
                 <&macro_tap>,
                 <&kp LA(F4)>,
+                <&macro_wait_time 500>,
                 <&macro_tap>,
                 <&kp DOWN>,
                 <&macro_tap>,
@@ -144,15 +161,15 @@
     keymap {
         compatible = "zmk,keymap";
 
-        main_layer {
-            display-name = "Main";
-            label = "Main";
+        win_fn_layer {
+            display-name = "WinFN";
+            label = "WinFN";
             bindings = <
-&kp ESC  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &fpc_id     &fpc_pw  &kp LG(L)  &excel_pw  &kp LC(LA(DELETE))  &kp BACKSPACE
-&kp TAB  &none         &none         &none         &none         &bt BT_CLR                                &kp ENTER   &none    &none      &none      &none               &win_restart
-&none    &none         &none         &none         &none         &none                                     &none       &none    &none      &none      &none               &none
-&chk_L0  &none         &none         &none         &none         &sys_reset    &to 1          &to 3        &sys_reset  &none    &none      &none      &none               &none
-                                     &none         &none         &none         &bootloader    &bootloader  &none       &none    &none
+&kp ESC  &kp F2        &f4_altf4        &kp F6     &f7_f8_pf8   &f5_f9                                &kp BACKSPACE  &kp EQUAL  &kp PLUS  &kp MINUS  &kp HOME   &kp END
+&kp TAB  &kp LG(L)     &winD_up         &kp LC(A)  &kp LA(TAB)  &kp F12                               &kp N7         &kp N8     &kp N9    &kp ASTRK  &kp PG_UP  &kp PG_DN
+&none    &win_restart  &kp LG(LA(DEL))  &excel_pw  &fpcID_PW    &print_shot                           &kp N4         &kp N5     &kp N6    &kp SLASH  &kp UP     &none
+&none    &none         &none            &none      &none        &none         &to 1        &to 4      &kp N1         &kp N2     &kp N3    &kp LEFT   &kp DOWN   &kp RIGHT
+                                        &kp LCTRL  &kp LWIN     &kp LEFT_ALT  &kp SPACE    &kp ENTER  &kp DELETE     &kp N0     &kp DOT
             >;
         };
 
@@ -160,23 +177,11 @@
             display-name = "Windows";
             label = "Win";
             bindings = <
-&esc_garve      &kp N1       &kp N2      &kp N3              &kp N4            &kp N5                              &kp N6         &kp N7       &kp N8           &kp N9           &kp N0                &kp MINUS
-&kp TAB         &kp Q        &kp W       &kp E               &kp R             &kp T                               &kp Y          &kp U        &kp I            &kp O            &kp P                 &kp EQUAL
-&winshot_print  &mt LCTRL A  &mt LALT S  &mt LEFT_COMMAND D  &mt LEFT_SHIFT F  &kp G                               &kp H          &mt RCTRL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &mt RIGHT_SHIFT SEMI  &kp SQT
-&none           &kp Z        &kp X       &kp C               &kp V             &kp B         &to 2        &LR_BKT  &kp N          &kp M        &kp COMMA        &kp DOT          &kp FSLH              &kp BACKSLASH
-                                         &kp LCTRL           &kp LGUI          &kp LEFT_ALT  &kp SPACE    &kp RET  &kp BACKSPACE  &none        &kp DEL
-            >;
-        };
-
-        win_fn_layer {
-            display-name = "WinFN";
-            label = "WinFN";
-            bindings = <
-&esc_switch  &kp F2  &f4_altf4  &kp F5     &kp F6    &f7_f8                                &kp BACKSPACE  &kp SLASH  &kp KP_MULTIPLY  &kp MINUS  &kp HOME   &kp END
-&kp TAB      &none   &none      &none      &kp F9    &kp F12                               &kp N7         &kp N8     &kp N9           &kp EQUAL  &kp PG_UP  &kp PG_DN
-&none        &none   &none      &none      &none     &none                                 &kp N4         &kp N5     &kp N6           &kp RET    &kp UP     &none
-&none        &none   &none      &none      &none     &none         &to 1        &to 0      &kp N1         &kp N2     &kp N3           &kp LEFT   &kp DOWN   &kp RIGHT
-                                &kp LCTRL  &kp LWIN  &kp LEFT_ALT  &kp SPACE    &kp ENTER  &kp DELETE     &kp N0     &kp DOT
+&esc_garve  &kp N1       &kp N2      &kp N3              &kp N4            &kp N5                              &kp N6         &kp N7       &kp N8           &kp N9           &kp N0                &kp MINUS
+&kp TAB     &kp Q        &kp W       &kp E               &kp R             &kp T                               &kp Y          &kp U        &kp I            &kp O            &kp P                 &kp EQUAL
+&none       &mt LCTRL A  &mt LALT S  &mt LEFT_COMMAND D  &mt LEFT_SHIFT F  &kp G                               &kp H          &mt RCTRL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &mt RIGHT_SHIFT SEMI  &kp SQT
+&none       &kp Z        &kp X       &kp C               &kp V             &kp B         &to 0        &LR_BKT  &kp N          &kp M        &kp COMMA        &kp DOT          &kp FSLH              &kp BACKSLASH
+                                     &kp LCTRL           &kp LGUI          &kp LEFT_ALT  &kp SPACE    &kp RET  &kp BACKSPACE  &to 4        &kp DEL
             >;
         };
 
@@ -184,11 +189,11 @@
             display-name = "Mac";
             label = "Mac";
             bindings = <
-&kp ESC    &kp N1       &kp N2          &kp N3          &kp N4            &kp N5                          &kp N6         &kp N7       &kp N8           &kp N9           &kp N0                &kp MINUS
-&kp GRAVE  &kp Q        &kp W           &kp E           &kp R             &kp T                           &kp Y          &kp U        &kp I            &kp O            &kp P                 &kp EQUAL
-&kp TAB    &mt LCTRL A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LEFT_SHIFT F  &kp G                           &kp H          &mt RCTRL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &mt RIGHT_SHIFT SEMI  &kp SQT
-&none      &kp Z        &kp X           &kp C           &kp V             &kp B     &to 4        &LR_BKT  &kp N          &kp M        &kp COMMA        &kp DOT          &kp FSLH              &kp BACKSLASH
-                                        &kp LCTRL       &kp LALT          &kp LGUI  &kp SPACE    &kp RET  &kp BACKSPACE  &spot_shot   &kp DELETE
+&esc_garve  &kp N1       &kp N2          &kp N3          &kp N4            &kp N5                          &kp N6         &kp N7       &kp N8           &kp N9           &kp N0                &kp MINUS
+&kp TAB     &kp Q        &kp W           &kp E           &kp R             &kp T                           &kp Y          &kp U        &kp I            &kp O            &kp P                 &kp EQUAL
+&spot_shot  &mt LCTRL A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LEFT_SHIFT F  &kp G                           &kp H          &mt RCTRL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &mt RIGHT_SHIFT SEMI  &kp SQT
+&none       &kp Z        &kp X           &kp C           &kp V             &kp B     &to 3        &LR_BKT  &kp N          &kp M        &kp COMMA        &kp DOT          &kp FSLH              &kp BACKSLASH
+                                         &kp LCTRL       &kp LALT          &kp LGUI  &kp SPACE    &kp RET  &kp BACKSPACE  &none        &kp DELETE
             >;
         };
 
@@ -196,11 +201,23 @@
             display-name = "MacFN";
             label = "MacFN";
             bindings = <
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &kp LA(SPACE)  &kp LG(LS(N5))                           &none          &kp SLASH  &kp KP_MULTIPLY  &kp MINUS  &kp HOME   &kp END
-&kp C_MUTE            &kp C_VOL_DN          &kp C_VOL_UP                       &kp C_PREV                              &kp C_PP       &kp C_NEXT                               &kp N7         &kp N8     &kp N9           &kp EQUAL  &kp PG_UP  &kp PG_DN
-&none                 &none                 &none                              &none                                   &none          &none                                    &kp N4         &kp N5     &kp N6           &kp RET    &kp UP     &none
-&none                 &none                 &none                              &none                                   &none          &none           &to 3        &to 0       &kp N1         &kp N2     &kp N3           &kp LEFT   &kp DOWN   &kp RIGHT
-                                                                               &kp LCTRL                               &kp LEFT_ALT   &kp LCMD        &kp SPACE    &kp RETURN  &kp BACKSPACE  &kp N0     &none
+&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &kp LA(SPACE)  &kp LG(LS(N5))                           &kp EQUAL      &kp PLUS  &kp MINUS  &kp ASTRK  &kp HOME   &kp END
+&kp C_MUTE            &kp C_VOL_DN          &kp C_VOL_UP                       &kp C_PREV                              &kp C_PP       &kp C_NEXT                               &kp N7         &kp N8    &kp N9     &kp SLASH  &kp PG_UP  &kp PG_DN
+&none                 &none                 &none                              &none                                   &none          &none                                    &kp N4         &kp N5    &kp N6     &none      &kp UP     &none
+&none                 &none                 &none                              &none                                   &none          &none           &to 2        &to 4       &kp N1         &kp N2    &kp N3     &kp LEFT   &kp DOWN   &kp RIGHT
+                                                                               &kp LCTRL                               &kp LEFT_ALT   &kp LCMD        &kp SPACE    &kp RETURN  &kp BACKSPACE  &kp N0    &kp DOT
+            >;
+        };
+
+        SYS_layer {
+            display-name = "System";
+            label = "System";
+            bindings = <
+&kp ESC  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &none       &none  &none  &none  &none  &none
+&kp TAB  &none         &none         &none         &none         &bt BT_CLR                                &none       &none  &none  &none  &none  &none
+&none    &none         &none         &none         &none         &none                                     &none       &none  &none  &none  &none  &none
+&chk_L0  &none         &none         &none         &none         &sys_reset    &to 0          &to 2        &sys_reset  &none  &none  &none  &none  &none
+                                     &none         &none         &none         &bootloader    &bootloader  &none       &none  &none
             >;
         };
     };
