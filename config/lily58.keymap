@@ -50,14 +50,6 @@
             label = "TAB_GARVE";
         };
 
-        tab_f1: tab_f1 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&kp TAB>, <&kp F1>;
-
-            label = "TAB_F1";
-        };
-
         f7_f8: f7_f8 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -72,6 +64,14 @@
             bindings = <&kp LG(LS(S))>, <&kp LC(P)>;
 
             label = "WINSHOT_PRINT";
+        };
+
+        esc_switch: esc_switch {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp LA(TAB)>;
+
+            label = "ESC_SWITCH";
         };
     };
 
@@ -129,9 +129,13 @@
             tap-ms = <0>;
             bindings =
                 <&macro_tap>,
+                <&kp LG(D)>,
+                <&macro_tap>,
                 <&kp LA(F4)>,
                 <&macro_tap>,
-                <&kp DOWN &kp ENTER>;
+                <&kp DOWN>,
+                <&macro_tap>,
+                <&kp ENTER>;
 
             label = "WIN_RESTART";
         };
@@ -168,11 +172,11 @@
             display-name = "WinFN";
             label = "WinFN";
             bindings = <
-&tab_f1  &kp F2  &f4_altf4  &kp F5     &kp F6    &f7_f8                           &kp BACKSPACE  &kp SLASH  &kp KP_MULTIPLY  &kp MINUS  &kp HOME   &kp END
-&none    &none   &none      &none      &kp F9    &kp F12                          &kp N7         &kp N8     &kp N9           &kp EQUAL  &kp PG_UP  &kp PG_DN
-&none    &none   &none      &none      &none     &none                            &kp N4         &kp N5     &kp N6           &kp RET    &kp UP     &none
-&none    &none   &none      &none      &none     &none    &to 1        &to 0      &kp N1         &kp N2     &kp N3           &kp LEFT   &kp DOWN   &kp RIGHT
-                            &kp LCTRL  &kp LWIN  &kp SQT  &kp SPACE    &kp ENTER  &kp DELETE     &kp N0     &kp DOT
+&esc_switch  &kp F2  &f4_altf4  &kp F5     &kp F6    &f7_f8                                &kp BACKSPACE  &kp SLASH  &kp KP_MULTIPLY  &kp MINUS  &kp HOME   &kp END
+&kp TAB      &none   &none      &none      &kp F9    &kp F12                               &kp N7         &kp N8     &kp N9           &kp EQUAL  &kp PG_UP  &kp PG_DN
+&none        &none   &none      &none      &none     &none                                 &kp N4         &kp N5     &kp N6           &kp RET    &kp UP     &none
+&none        &none   &none      &none      &none     &none         &to 1        &to 0      &kp N1         &kp N2     &kp N3           &kp LEFT   &kp DOWN   &kp RIGHT
+                                &kp LCTRL  &kp LWIN  &kp LEFT_ALT  &kp SPACE    &kp ENTER  &kp DELETE     &kp N0     &kp DOT
             >;
         };
 
