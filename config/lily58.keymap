@@ -61,7 +61,7 @@
         print_shot: print_shot {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp LG(P)>, <&kp LG(LS(S))>;
+            bindings = <&kp LC(P)>, <&kp LG(LS(S))>;
 
             label = "PRINT_SHOT";
         };
