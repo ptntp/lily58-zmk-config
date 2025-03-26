@@ -145,15 +145,13 @@
             tap-ms = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LG(D)>,
-                <&macro_wait_time 800>,
+                <&kp LG(X)>,
+                <&macro_wait_time 50>,
                 <&macro_tap>,
-                <&kp LA(F4)>,
-                <&macro_pause_for_release>,
+                <&kp U>,
+                <&macro_tap_time 50>,
                 <&macro_tap>,
-                <&kp DOWN>,
-                <&macro_tap>,
-                <&kp ENTER>;
+                <&kp R>;
 
             label = "WIN_RESTART";
         };
