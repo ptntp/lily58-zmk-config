@@ -85,7 +85,7 @@
         winD_up: winD_up {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp LG(F5)>, <&kp LG(UP_ARROW)>;
+            bindings = <&kp LG(D)>, <&kp LG(UP_ARROW)>;
 
             label = "WIND_UP";
         };
