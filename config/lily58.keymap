@@ -97,6 +97,14 @@
 
             label = "F6_SHIF6";
         };
+
+        f10_ctrlS: f10_ctrlS {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&kp F10>, <&kp LC(S)>;
+
+            label = "F10_CTRLS";
+        };
     };
 
     macros {
@@ -176,7 +184,7 @@
             label = "WinFN";
             bindings = <
 &kp ESC         &kp F2        &f4_altf4        &f6_shif6  &f7_f8_pf8  &f5_f9                                &kp BACKSPACE  &kp EQUAL  &kp PLUS  &kp MINUS  &kp HOME   &kp END
-&kp TAB         &kp LG(L)     &winD_up         &kp LC(A)  &kp F10     &kp F12                               &kp N7         &kp N8     &kp N9    &kp ASTRK  &kp PG_UP  &kp PG_DN
+&kp TAB         &kp LG(L)     &winD_up         &kp LC(A)  &f10_ctrlS  &kp F12                               &kp N7         &kp N8     &kp N9    &kp ASTRK  &kp PG_UP  &kp PG_DN
 &kp LEFT_SHIFT  &win_restart  &kp LG(LA(DEL))  &excel_pw  &fpcID_PW   &print_shot                           &kp N4         &kp N5     &kp N6    &kp SLASH  &kp UP     &none
 &none           &none         &none            &none      &none       &none         &to 1        &to 4      &kp N1         &kp N2     &kp N3    &kp LEFT   &kp DOWN   &kp RIGHT
                                                &kp LCTRL  &kp LWIN    &kp LEFT_ALT  &kp SPACE    &kp ENTER  &kp DELETE     &kp N0     &kp DOT
