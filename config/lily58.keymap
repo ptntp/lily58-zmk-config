@@ -201,7 +201,7 @@
             bindings = <
 &kp ESC  &kp F2     &f4_altf4        &f6_shif6  &f7_f8_pf8  &f5_f9                                &kp BACKSPACE  &kp EQUAL  &kp PLUS  &kp MINUS  &kp HOME   &kp END
 &kp TAB  &winD_up   &ctlX_C_V        &kp LC(A)  &f10_ctlS   &kp F12                               &kp N7         &kp N8     &kp N9    &kp ASTRK  &kp PG_UP  &kp PG_DN
-&none    &winL_RST  &kp LG(LA(DEL))  &excel_pw  &fpcID_PW   &print_shot                           &kp N4         &kp N5     &kp N6    &kp SLASH  &kp UP     &none
+&none    &winL_RST  &kp LC(LA(DEL))  &excel_pw  &fpcID_PW   &print_shot                           &kp N4         &kp N5     &kp N6    &kp SLASH  &kp UP     &none
 &none    &none      &none            &none      &none       &none         &to 1        &to 4      &kp N1         &kp N2     &kp N3    &kp LEFT   &kp DOWN   &kp RIGHT
                                      &kp LCTRL  &kp LWIN    &kp LEFT_ALT  &kp SPACE    &kp ENTER  &kp DELETE     &kp N0     &kp DOT
             >;
