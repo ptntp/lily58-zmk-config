@@ -199,11 +199,11 @@
             display-name = "WinFN";
             label = "WinFN";
             bindings = <
-&kp ESC  &kp F2     &f4_altf4        &f6_shif6  &f7_f8_pf8  &f5_f9                                &kp BACKSPACE  &kp EQUAL  &kp PLUS  &kp MINUS  &kp HOME   &kp END
-&kp TAB  &winD_up   &ctlX_C_V        &kp LC(A)  &f10_ctlS   &kp F12                               &kp N7         &kp N8     &kp N9    &kp ASTRK  &kp PG_UP  &kp PG_DN
-&none    &winL_RST  &kp LC(LA(DEL))  &excel_pw  &fpcID_PW   &print_shot                           &kp N4         &kp N5     &kp N6    &kp SLASH  &kp UP     &none
-&none    &none      &none            &none      &none       &none         &to 1        &to 4      &kp N1         &kp N2     &kp N3    &kp LEFT   &kp DOWN   &kp RIGHT
-                                     &kp LCTRL  &kp LWIN    &kp LEFT_ALT  &kp SPACE    &kp ENTER  &kp DELETE     &kp N0     &kp DOT
+&kp ESC         &kp F2     &f4_altf4        &f6_shif6  &f7_f8_pf8  &f5_f9                                &kp BACKSPACE  &kp EQUAL  &kp PLUS  &kp MINUS  &kp HOME   &kp END
+&kp TAB         &winD_up   &ctlX_C_V        &kp LC(A)  &f10_ctlS   &kp F12                               &kp N7         &kp N8     &kp N9    &kp ASTRK  &kp PG_UP  &kp PG_DN
+&kp LEFT_SHIFT  &winL_RST  &kp LC(LA(DEL))  &excel_pw  &fpcID_PW   &print_shot                           &kp N4         &kp N5     &kp N6    &kp SLASH  &kp UP     &none
+&none           &none      &none            &none      &none       &none         &to 1        &to 4      &kp N1         &kp N2     &kp N3    &kp LEFT   &kp DOWN   &kp RIGHT
+                                            &kp LCTRL  &kp LWIN    &kp LEFT_ALT  &kp SPACE    &kp ENTER  &kp DELETE     &kp N0     &kp DOT
             >;
         };
 
@@ -211,11 +211,11 @@
             display-name = "Windows";
             label = "Win";
             bindings = <
-&esc_garve  &kp N1       &kp N2      &kp N3              &kp N4            &kp N5                              &kp N6         &kp N7       &kp N8           &kp N9           &kp N0                &kp MINUS
-&kp TAB     &kp Q        &kp W       &kp E               &kp R             &kp T                               &kp Y          &kp U        &kp I            &kp O            &kp P                 &kp EQUAL
-&none       &mt LCTRL A  &mt LALT S  &mt LEFT_COMMAND D  &mt LEFT_SHIFT F  &kp G                               &kp H          &mt RCTRL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &mt RIGHT_SHIFT SEMI  &kp SQT
-&none       &kp Z        &kp X       &kp C               &kp V             &kp B         &to 0        &LR_BKT  &kp N          &kp M        &kp COMMA        &kp DOT          &kp FSLH              &kp BACKSLASH
-                                     &kp LCTRL           &kp LGUI          &kp LEFT_ALT  &kp SPACE    &kp RET  &kp BACKSPACE  &none        &kp DEL
+&esc_garve      &kp N1       &kp N2      &kp N3              &kp N4    &kp N5                              &kp N6         &kp N7       &kp N8           &kp N9           &kp N0         &kp MINUS
+&kp TAB         &kp Q        &kp W       &kp E               &kp R     &kp T                               &kp Y          &kp U        &kp I            &kp O            &kp P          &kp EQUAL
+&kp LEFT_SHIFT  &mt LCTRL A  &mt LALT S  &mt LEFT_COMMAND D  &kp F     &kp G                               &kp H          &mt RCTRL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &kp SEMICOLON  &kp SQT
+&none           &kp Z        &kp X       &kp C               &kp V     &kp B         &to 0        &LR_BKT  &kp N          &kp M        &kp COMMA        &kp DOT          &kp FSLH       &kp BACKSLASH
+                                         &kp LCTRL           &kp LGUI  &kp LEFT_ALT  &kp SPACE    &kp RET  &kp BACKSPACE  &none        &kp DEL
             >;
         };
 
