@@ -215,7 +215,7 @@
             >;
         };
 
-        windows_layer {
+        win_layer {
             display-name = "Windows";
             label = "Win";
             bindings = <
