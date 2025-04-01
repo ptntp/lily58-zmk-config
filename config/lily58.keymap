@@ -202,7 +202,7 @@
 &kp ESC         &kp F2     &f4_altf4        &f6_shif6  &f7_f8_pf8  &f5_f9                                &kp BACKSPACE  &kp EQUAL  &kp PLUS  &kp MINUS  &kp HOME   &kp END
 &kp TAB         &winD_up   &ctlX_C_V        &kp LC(A)  &f10_ctlS   &kp F12                               &kp N7         &kp N8     &kp N9    &kp ASTRK  &kp PG_UP  &kp PG_DN
 &kp LEFT_SHIFT  &winL_RST  &kp LC(LA(DEL))  &excel_pw  &fpcID_PW   &print_shot                           &kp N4         &kp N5     &kp N6    &kp SLASH  &kp UP     &none
-&none           &none      &none            &none      &none       &none         &to 1        &to 4      &kp N1         &kp N2     &kp N3    &kp LEFT   &kp DOWN   &kp RIGHT
+&none           &none      &none            &none      &none       &none         &to 1        &to 5      &kp N1         &kp N2     &kp N3    &kp LEFT   &kp DOWN   &kp RIGHT
                                             &kp LCTRL  &kp LWIN    &kp LEFT_ALT  &kp SPACE    &kp ENTER  &kp DELETE     &kp N0     &kp DOT
             >;
         };
@@ -240,6 +240,18 @@
 &kp LC(LA(LG(K_POWER)))  &none                 &none                              &none                                   &none          &none                                    &kp N4         &kp N5    &kp N6     &none      &kp UP     &none
 &none                    &none                 &none                              &none                                   &none          &none           &to 2        &to 4       &kp N1         &kp N2    &kp N3     &kp LEFT   &kp DOWN   &kp RIGHT
                                                                                   &kp LCTRL                               &kp LEFT_ALT   &kp LCMD        &kp SPACE    &kp RETURN  &kp BACKSPACE  &kp N0    &kp DOT
+            >;
+        };
+
+        Mac_Game_Layer {
+            label = "MacGame";
+            display-name = "Mac";
+            bindings = <
+&kp GRAVE  &kp N1  &kp N2  &kp N3     &kp N4    &kp N5                          &kp N6         &kp N7  &kp N8      &kp N9   &kp N0    &kp MINUS
+&kp TAB    &kp Q   &kp W   &kp E      &kp R     &kp T                           &kp Y          &kp U   &kp I       &kp O    &kp P     &kp EQUAL
+&kp LSHFT  &kp A   &kp S   &kp D      &kp F     &kp G                           &kp H          &kp J   &kp K       &kp L    &kp SEMI  &kp SQT
+&none      &kp Z   &kp X   &kp C      &kp V     &kp B     &to 2        &to 5    &kp N          &kp M   &kp COMMA   &kp DOT  &kp FSLH  &kp BACKSLASH
+                           &kp LCTRL  &kp LALT  &kp LGUI  &kp SPACE    &kp RET  &kp BACKSPACE  &none   &kp DELETE
             >;
         };
 
