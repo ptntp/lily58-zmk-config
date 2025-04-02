@@ -10,11 +10,12 @@
 
 // Layers
 
-#define Main        0
+#define WinFN       0
 #define Win         1
-#define WinFN       2
-#define Mac         3
-#define MacFN       4
+#define Mac         2
+#define MacFN       3
+#define SYS         4
+#define Game        5
 
 / {
     behaviors {
@@ -210,7 +211,7 @@
 &kp ESC         &kp F2     &f4_altf4        &f6_shif6  &f7_f8_pf8  &f5_f9                                &kp BACKSPACE  &kp EQUAL  &kp PLUS  &kp MINUS  &kp HOME   &kp END
 &kp TAB         &winD_up   &ctlC_V          &ctlA_X    &f10_ctlS   &kp F12                               &kp N7         &kp N8     &kp N9    &kp ASTRK  &kp PG_UP  &kp PG_DN
 &kp LEFT_SHIFT  &winL_RST  &kp LC(LA(DEL))  &excel_pw  &fpcID_PW   &print_shot                           &kp N4         &kp N5     &kp N6    &kp SLASH  &kp UP     &none
-&none           &none      &none            &none      &none       &none         &to 1        &to 4      &kp N1         &kp N2     &kp N3    &kp LEFT   &kp DOWN   &kp RIGHT
+&none           &none      &none            &none      &none       &none         &to Win      &to SYS    &kp N1         &kp N2     &kp N3    &kp LEFT   &kp DOWN   &kp RIGHT
                                             &kp LCTRL  &kp LWIN    &kp LEFT_ALT  &kp SPACE    &kp ENTER  &kp DELETE     &kp N0     &kp DOT
             >;
         };
@@ -222,7 +223,7 @@
 &esc_garve      &kp N1       &kp N2      &kp N3              &kp N4    &kp N5                              &kp N6         &kp N7       &kp N8           &kp N9           &kp N0         &kp MINUS
 &kp TAB         &kp Q        &kp W       &kp E               &kp R     &kp T                               &kp Y          &kp U        &kp I            &kp O            &kp P          &kp EQUAL
 &kp LEFT_SHIFT  &mt LCTRL A  &mt LALT S  &mt LEFT_COMMAND D  &kp F     &kp G                               &kp H          &mt RCTRL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &kp SEMICOLON  &kp SQT
-&none           &kp Z        &kp X       &kp C               &kp V     &kp B         &to 0        &LR_BKT  &kp N          &kp M        &kp COMMA        &kp DOT          &kp FSLH       &kp BACKSLASH
+&none           &kp Z        &kp X       &kp C               &kp V     &kp B         &to WinFN    &LR_BKT  &kp N          &kp M        &kp COMMA        &kp DOT          &kp FSLH       &kp BACKSLASH
                                          &kp LCTRL           &kp LGUI  &kp LEFT_ALT  &kp SPACE    &kp RET  &kp BACKSPACE  &none        &kp DEL
             >;
         };
@@ -231,11 +232,11 @@
             display-name = "Mac";
             label = "Mac";
             bindings = <
-&esc_garve      &kp N1  &kp N2  &kp N3     &kp N4    &kp N5                          &kp N6         &kp N7  &kp N8      &kp N9   &kp N0    &kp MINUS
-&kp TAB         &kp Q   &kp W   &kp E      &kp R     &kp T                           &kp Y          &kp U   &kp I       &kp O    &kp P     &kp EQUAL
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D      &kp F     &kp G                           &kp H          &kp J   &kp K       &kp L    &kp SEMI  &kp SQT
-&spot_shot      &kp Z   &kp X   &kp C      &kp V     &kp B     &to 3        &LR_BKT  &kp N          &kp M   &kp COMMA   &kp DOT  &kp FSLH  &kp BACKSLASH
-                                &kp LCTRL  &kp LALT  &kp LGUI  &kp SPACE    &kp RET  &kp BACKSPACE  &none   &kp DELETE
+&esc_garve      &kp N1  &kp N2  &kp N3     &kp N4    &kp N5                           &kp N6         &kp N7  &kp N8      &kp N9   &kp N0    &kp MINUS
+&kp TAB         &kp Q   &kp W   &kp E      &kp R     &kp T                            &kp Y          &kp U   &kp I       &kp O    &kp P     &kp EQUAL
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D      &kp F     &kp G                            &kp H          &kp J   &kp K       &kp L    &kp SEMI  &kp SQT
+&spot_shot      &kp Z   &kp X   &kp C      &kp V     &kp B     &to MacFN     &LR_BKT  &kp N          &kp M   &kp COMMA   &kp DOT  &kp FSLH  &kp BACKSLASH
+                                &kp LCTRL  &kp LALT  &kp LGUI  &kp SPACE     &kp RET  &kp BACKSPACE  &none   &kp DELETE
             >;
         };
 
@@ -246,7 +247,7 @@
 &kp C_BRIGHTNESS_DEC     &kp C_BRIGHTNESS_INC  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &kp LA(SPACE)  &kp LG(LS(N5))                           &kp EQUAL      &kp PLUS  &kp MINUS  &kp ASTRK  &kp HOME   &kp END
 &kp C_MUTE               &kp C_VOL_DN          &kp C_VOL_UP                       &kp C_PREV                              &kp C_PP       &kp C_NEXT                               &kp N7         &kp N8    &kp N9     &kp SLASH  &kp PG_UP  &kp PG_DN
 &kp LC(LA(LG(K_POWER)))  &none                 &none                              &none                                   &none          &none                                    &kp N4         &kp N5    &kp N6     &none      &kp UP     &none
-&none                    &none                 &none                              &none                                   &none          &none           &to 2        &to 4       &kp N1         &kp N2    &kp N3     &kp LEFT   &kp DOWN   &kp RIGHT
+&none                    &none                 &none                              &none                                   &none          &none           &to Mac      &to SYS     &kp N1         &kp N2    &kp N3     &kp LEFT   &kp DOWN   &kp RIGHT
                                                                                   &kp LCTRL                               &kp LEFT_ALT   &kp LCMD        &kp SPACE    &kp RETURN  &kp BACKSPACE  &kp N0    &kp DOT
             >;
         };
@@ -255,12 +256,25 @@
             display-name = "System";
             label = "System";
             bindings = <
-&kp ESC  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &none       &none  &none  &none  &none  &none
-&kp TAB  &none         &none         &none         &none         &bt BT_CLR                                &none       &none  &none  &none  &none  &none
-&none    &none         &none         &none         &none         &none                                     &none       &none  &none  &none  &none  &none
-&chk_L0  &none         &none         &none         &none         &sys_reset    &to 0          &to 2        &sys_reset  &none  &none  &none  &none  &none
-                                     &none         &none         &none         &bootloader    &bootloader  &none       &none  &none
+&kp ESC  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &none       &none     &none  &none  &none  &none
+&kp TAB  &none         &none         &none         &none         &bt BT_CLR                                &none       &none     &none  &none  &none  &none
+&none    &none         &none         &none         &none         &none                                     &none       &none     &none  &none  &none  &none
+&chk_L0  &none         &none         &none         &none         &sys_reset    &to Win        &to Mac      &sys_reset  &to Game  &none  &none  &none  &none
+                                     &none         &none         &none         &bootloader    &bootloader  &none       &none     &none
             >;
         };
     };
+
+        Game_layer {
+            display-name = "Game";
+            label = "Game";
+            bindings = <
+&none  &none  &none  &none  &none  &none                    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none    &to Win  &none  &none  &none  &none  &none  &none
+                     &none  &none  &none  &none    &to SYS  &none  &none  &none
+            >;
+        };
+
 };
