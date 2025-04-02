@@ -263,7 +263,6 @@
                                      &none         &none         &none         &bootloader    &bootloader  &none       &none     &none
             >;
         };
-    };
 
         Game_layer {
             display-name = "Game";
@@ -276,5 +275,4 @@
                      &none  &none  &none  &none    &to SYS  &none  &none  &none
             >;
         };
-
 };
