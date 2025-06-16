@@ -152,7 +152,7 @@
             tap-ms = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp N2 &kp N5 &kp N8 &kp N7 &kp N3 &kp N6 &kp N9 &kp N9 &kp LS(A) &kp A &kp ENTER>;
+                <&kp N2 &kp N5 &kp N8 &kp N7 &kp N3 &kp N6 &kp N9 &kp N0 &kp LS(A) &kp A &kp ENTER>;
 
             label = "FPC_PW";
         };
@@ -220,11 +220,11 @@
             display-name = "Windows";
             label = "Win";
             bindings = <
-&esc_garve      &kp N1       &kp N2      &kp N3              &kp N4    &kp N5                              &kp N6         &kp N7       &kp N8           &kp N9           &kp N0         &kp MINUS
-&kp TAB         &kp Q        &kp W       &kp E               &kp R     &kp T                               &kp Y          &kp U        &kp I            &kp O            &kp P          &kp EQUAL
-&kp LEFT_SHIFT  &mt LCTRL A  &mt LALT S  &mt LEFT_COMMAND D  &kp F     &kp G                               &kp H          &mt RCTRL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &kp SEMICOLON  &kp SQT
-&none           &kp Z        &kp X       &kp C               &kp V     &kp B         &to WinFN    &LR_BKT  &kp N          &kp M        &kp COMMA        &kp DOT          &kp FSLH       &kp BACKSLASH
-                                         &kp LCTRL           &kp LGUI  &kp LEFT_ALT  &kp SPACE    &kp RET  &kp BACKSPACE  &none        &kp DEL
+&esc_garve      &kp N1  &kp N2  &kp N3     &kp N4    &kp N5                              &kp N6         &kp N7  &kp N8     &kp N9   &kp N0         &kp MINUS
+&kp TAB         &kp Q   &kp W   &kp E      &kp R     &kp T                               &kp Y          &kp U   &kp I      &kp O    &kp P          &kp EQUAL
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D      &kp F     &kp G                               &kp H          &kp J   &kp K      &kp L    &kp SEMICOLON  &kp SQT
+&none           &kp Z   &kp X   &kp C      &kp V     &kp B         &to WinFN    &LR_BKT  &kp N          &kp M   &kp COMMA  &kp DOT  &kp FSLH       &kp BACKSLASH
+                                &kp LCTRL  &kp LGUI  &kp LEFT_ALT  &kp SPACE    &kp RET  &kp BACKSPACE  &none   &kp DEL
             >;
         };
 
@@ -232,11 +232,11 @@
             display-name = "Mac";
             label = "Mac";
             bindings = <
-&esc_garve      &kp N1  &kp N2  &kp N3     &kp N4    &kp N5                           &kp N6         &kp N7  &kp N8      &kp N9   &kp N0    &kp MINUS
-&kp TAB         &kp Q   &kp W   &kp E      &kp R     &kp T                            &kp Y          &kp U   &kp I       &kp O    &kp P     &kp EQUAL
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D      &kp F     &kp G                            &kp H          &kp J   &kp K       &kp L    &kp SEMI  &kp SQT
-&spot_shot      &kp Z   &kp X   &kp C      &kp V     &kp B     &to MacFN     &LR_BKT  &kp N          &kp M   &kp COMMA   &kp DOT  &kp FSLH  &kp BACKSLASH
-                                &kp LCTRL  &kp LALT  &kp LGUI  &kp SPACE     &kp RET  &kp BACKSPACE  &none   &kp DELETE
+&esc_garve      &kp N1  &kp N2  &kp N3     &kp N4    &kp N5                          &kp N6         &kp N7  &kp N8      &kp N9   &kp N0    &kp MINUS
+&kp TAB         &kp Q   &kp W   &kp E      &kp R     &kp T                           &kp Y          &kp U   &kp I       &kp O    &kp P     &kp EQUAL
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D      &kp F     &kp G                           &kp H          &kp J   &kp K       &kp L    &kp SEMI  &kp SQT
+&spot_shot      &kp Z   &kp X   &kp C      &kp V     &kp B     &to MacFN    &LR_BKT  &kp N          &kp M   &kp COMMA   &kp DOT  &kp FSLH  &kp BACKSLASH
+                                &kp LCTRL  &kp LALT  &kp LGUI  &kp SPACE    &kp RET  &kp BACKSPACE  &none   &kp DELETE
             >;
         };
 
