@@ -5,8 +5,9 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 // Layers
 
@@ -15,7 +16,6 @@
 #define Mac         2
 #define MacFN       3
 #define SYS         4
-#define Game        5
 
 / {
     behaviors {
@@ -261,20 +261,8 @@
 &none    &none         &none         &none         &none         &none                                     &none       &none     &none  &none  &none  &none
 &chk_L0  &none         &none         &none         &none         &sys_reset    &to Win        &to Mac      &sys_reset  &to Game  &none  &none  &none  &none
                                      &none         &none         &none         &bootloader    &bootloader  &none       &none     &none
-            >;
-        };
 
-        Game_layer {
-            display-name = "Game";
-            label = "Game";
-            bindings = <
-&none  &none  &none  &none  &none  &none                    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none    &to Win  &none  &none  &none  &none  &none  &none
-                     &none  &none  &none  &none    &to SYS  &none  &none  &none
             >;
         };
     };
 };
-TinyURL
